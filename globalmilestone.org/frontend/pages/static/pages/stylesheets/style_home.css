@@ -1,0 +1,498 @@
+
+body {
+  position: absolute;
+}
+
+/* Landing Section: */
+
+/* This is where the text and any other front-items are and uses a flexbox for organization */
+.landing {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* This colors the "we are" section of the text */
+.landing span {
+  color: #e7803b;
+}
+
+.landing_inner {
+  text-align: left;
+  width: 80%;
+}
+
+.landing{
+  color: #FFFFFF;
+}
+
+/* This is where the image is, which is fixed and slides behind the page */
+.bckg{
+  z-index:-9999;
+  position:fixed;
+  width:100%;
+  height:85vh;
+  background-image: linear-gradient(
+      rgba(256, 256, 256, 0),
+      rgba(256, 256, 256, 0)
+    ), url(../img/landing_img.jpeg);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+}
+
+
+/* --------- */
+
+/* Content Sections */
+.content_wrapper {
+  position: absolute;
+  width:100%;
+}
+
+/* The section wrapper does not slide */
+.section_wrapper {
+  height: 80vh;
+  padding: 70px;
+  background-color:  #F5FAFA;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* The section container slides */
+.section_container {
+  padding: 10px;
+  text-align:center;
+  border: 1px solid #e7803b;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Contains the subtopics*/
+.flex_container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Each span contains one section */
+.flex_container span {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 80%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* This will be animated */
+  visibility: hidden;
+}
+
+/* This has a singular purpose of aligning the text to the left but aligning the
+images in the center */
+.flex_container .slider_text_container {
+  text-align: left;
+}
+
+
+.flex_container img{
+  position: relative;
+  bottom:0;
+  display: block;
+
+}
+
+
+/* ---------- */
+
+/* How it Works Section*/
+.works_wrapper {
+  background-color: rgb(5,5,5);
+  color: white;
+}
+
+.final_wrapper{
+  overflow-y: hidden;
+}
+
+
+/* Animation */
+/* Left */
+.section_container.slide_left span {
+  transition: left 1s cubic-bezier(.22,.47,.11,.92);
+  left: -1200px;
+}
+
+.section_container.slide_left span.posed {
+  visibility:visible;
+  left:0;
+}
+
+.section_container.slide_left {
+  position:relative;
+  left: -1200px;
+  visibility: hidden;
+  transition: left 1s cubic-bezier(.22,.47,.11,.92), border .7s .2s linear;
+}
+
+.section_container.slide_left.posed {
+      border: 1px solid #e7803b;
+    visibility: visible;
+    left: 0;
+}
+
+/* Right */
+
+
+.section_container.slide_right span {
+  position:relative;
+    transition: right 1s cubic-bezier(.22,.47,.11,.92);
+    right: -1200px;
+}
+
+.section_container.slide_right span.posed {
+  visibility:visible;
+  right: 0;
+}
+
+.section_container.slide_right {
+  position: relative;
+  visibility: hidden;
+  transition: right 1s cubic-bezier(.22,.47,.11,.92), border .7s .2s linear;
+  right: -1200px;
+
+}
+
+.section_container.slide_right.posed {
+    border: 1px solid #e7803b;
+    visibility: visible;
+    right: 0;
+}
+
+
+/* Up */
+.section_container.slide_up span {
+    position:relative;
+    transition: bottom 1s cubic-bezier(.22,.47,.11,.92), border .5s cubic-bezier(.22,.47,.11,.92);
+    bottom: -1200px;
+}
+
+.section_container.slide_up span.posed {
+  visibility:visible;
+  bottom: 0;
+}
+
+.section_container.slide_up {
+  position: relative;
+  visibility: hidden;
+  transition: bottom 1s cubic-bezier(.22,.47,.11,.92), border .7s .2s linear;
+  bottom: -1200px;
+
+}
+
+.section_container.slide_up.posed {
+    visibility: visible;
+    bottom: 0;
+}
+
+.final {
+  border: none;
+  margin:auto;
+}
+
+.final_wrapper {
+  height: 40vh;
+  margin:auto
+}
+
+.final a {
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+    line-height: 5vh;
+}
+
+.final span{
+  width: 15vw;
+  height: 5vh;
+  text-align: center;
+    background-color: 	rgba(231, 128, 59, 1);
+    margin: 10px;
+    border-radius: 2px;
+}
+
+
+footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer_wrapper {
+  text-align: center;
+}
+
+
+/* --------- */
+
+
+/* Hover capable devices */
+@media (hover: hover){
+  /*
+  #header {
+    background-color: #000000;
+    transition: background-color 0.2s cubic-bezier(.22,.47,.11,.92), padding 0.3s cubic-bezier(.22,.47,.11,.92);
+
+  }
+  #header:hover {
+    background-color: #000000;
+    padding: 5px;
+  }
+*/
+
+
+
+}
+
+
+.final span:hover{
+  border-top: solid 3px black;
+}
+
+
+/* WIDTH BASED DISTINCTIONS */
+
+/* Desktop */
+
+@media screen and (min-width: 1100px) {
+  .flex_container{
+    flex-direction: row;
+  }
+  .flex_container span {
+    width: 20%;
+  }
+
+
+}
+@media screen and (max-aspect-ratio: 1/1) {
+  .flex_container{
+    flex-direction: column;
+  }
+  .flex_container span {
+    width: 65%;
+  }
+}
+
+
+@media screen and (max-width: 1100px) {
+  .section_wrapper {
+    height: auto;
+  }
+  .flex_container span {
+    width: 65%;
+  }
+
+  .section_container.slide_left span {
+    left: -900px;
+  }
+
+  .section_container.slide_left span.posed {
+    visibility:visible;
+    left:0;
+  }
+
+
+  .section_container.slide_left {
+    left: -900px;
+  }
+
+  .section_container.slide_left.posed {
+    left: 0;
+  }
+
+
+
+  .section_container.slide_right span {
+    right: -900px;
+  }
+
+  .section_container.slide_right span.posed {
+    visibility:visible;
+    right:0;
+  }
+
+
+  .section_container.slide_right {
+    right: -900px;
+  }
+
+  .section_container.slide_right.posed {
+    right: 0;
+  }
+
+
+
+  .section_container.slide_up span {
+    bottom: -900px;
+  }
+
+  .section_container.slide_up span.posed {
+    visibility:visible;
+    bottom:0;
+  }
+
+
+  .section_container.slide_up {
+    bottom: -900px;
+  }
+
+  .section_container.slide_up.posed {
+    bottom: 0;
+  }
+
+
+}
+
+@media screen and (max-width: 599px) {
+
+    .flex_container span {
+      width: 75%;
+    }
+
+    .section_wrapper {
+      padding: 40px;
+    }
+
+    .section_container.slide_left span {
+      left: -600px;
+    }
+
+    .section_container.slide_left span.posed {
+      visibility:visible;
+      left:0;
+    }
+
+    .section_container.slide_left {
+      left: -600px;
+    }
+
+    .section_container.slide_left.posed {
+      left: 0;
+    }
+
+
+
+    .section_container.slide_right span {
+      right: -600px;
+    }
+
+    .section_container.slide_right span.posed {
+      visibility:visible;
+      right:0;
+    }
+
+    .section_container.slide_right {
+      right: -600px;
+    }
+
+    .section_container.slide_right.posed {
+      right: 0;
+    }
+
+
+
+
+      .section_container.slide_up span {
+        bottom: -600px;
+      }
+
+      .section_container.slide_up span.posed {
+        visibility:visible;
+        bottom:0;
+      }
+
+
+      .section_container.slide_up {
+        bottom: -600px;
+      }
+
+      .section_container.slide_up.posed {
+        bottom: 0;
+      }
+}
+
+@media screen and (max-width: 450px) {
+  .flex_container span {
+    width: 75%;
+  }
+
+  .section_container.slide_left span {
+    left: -500px;
+  }
+
+  .section_container.slide_left span.posed {
+    visibility:visible;
+    left:0;
+  }
+
+  .section_container.slide_left {
+    left: -500px;
+  }
+
+  .section_container.slide_left.posed {
+    left: 0;
+  }
+
+
+
+
+  .section_container.slide_right span {
+    right: -500px;
+  }
+
+  .section_container.slide_right span.posed {
+    visibility:visible;
+    right:0;
+  }
+
+  .section_container.slide_right {
+    right: -500px;
+  }
+
+  .section_container.slide_right.posed {
+    right: 0;
+  }
+
+
+
+    .section_container.slide_up span {
+      bottom: -500px;
+    }
+
+    .section_container.slide_up span.posed {
+      visibility:visible;
+      bottom:0;
+    }
+
+
+    .section_container.slide_up {
+      bottom: -500px;
+    }
+
+    .section_container.slide_up.posed {
+      bottom: 0;
+    }
+}
+
+/* HEIGHT BASED DISTINCTIONS */
+
+/* Large Desktop */

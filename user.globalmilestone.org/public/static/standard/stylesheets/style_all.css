@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@-webkit-viewport{width:device-width}
+@-moz-viewport{width:device-width}
+@-ms-viewport{width:device-width}
+@-o-viewport{width:device-width}
+@viewport{width:device-width }
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+h1 {
+
+  font-family: bilo, sans-serif;
+
+  font-weight: 200;
+
+  font-style: normal;
+
+
+  font-size: 4em;
+}
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 3.3em;
+  }
+}
+h2 {
+  font-family: bilo, sans-serif;
+
+  font-weight: 200;
+
+  font-style: normal;
+
+
+
+  font-size: 3.2em;
+}
+
+h3 {
+  font-family: bilo, sans-serif;
+
+  font-weight: 200;
+
+  font-style: normal;
+
+
+
+
+  font-size: 2em;
+}
+
+h4 {
+  font-family: bilo, sans-serif;
+
+  font-weight: 200;
+
+  font-style: normal;
+
+
+
+
+  font-size: 1.7em;
+}
+
+
+p{
+  font-family: mr-eaves-xl-modern, sans-serif;
+
+font-weight: 200;
+
+font-style: normal;
+  font-size: 1.5em;
+}
+
+small {
+  font-family: mr-eaves-xl-modern, sans-serif;
+
+font-weight: 200;
+
+font-style: normal;
+  font-size: .7em;
+}
+
+a {
+  font-family: mr-eaves-xl-modern, sans-serif;
+
+font-weight: 200;
+
+font-style: normal;
+  font-size: 1em;
+
+ text-decoration: none;
+ color: inherit;
+}

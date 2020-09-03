@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> The Global Milestone Club </title>
+    <link rel=”icon” href = “favicon.ico”>
+    <link rel="stylesheet" href="https://use.typekit.net/wvo2aqc.css">
+    <link rel = "stylesheet", type = "text/css", href = "{% static "pages/stylesheets/style_all.css" %}">
+    <link rel = "stylesheet", type = "text/css", href = "{% static "pages/stylesheets/header.css" %}">
+
+    <script
+    src="https://code.jquery.com/jquery-3.5.0.min.js"
+    integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+    crossorigin="anonymous"></script>
+
+    <script src = "{% static "pages/scripts/header.js" %}"></script>
+    {% block head %}
+
+    {% endblock %}
+
+  </head>
+
+  <body>
+    <div class = "header_dummy">
+    </div>
+    <header id = "header">
+        <a class = "logo" href="https://globalmilestone.org/us"><img src = "{% static "pages/img/icons/Logo.svg" %}"/></a>
+      <nav>
+
+
+        <div class = "navlist">
+          <ul>
+            <a class= "hamburger_parent">
+
+              <div class = "hamburger">
+                <div class = "hamburger_1">
+                </div>
+                <div class="hamburger_mid">
+                </div>
+                <div class = "hamburger_2">
+                </div>
+
+              </div>
+            </a>
+
+            <a href="index.html" class="home_link">
+            <h4>Home</h4>
+            </a>
+            <a href="https://globalmilestone.org/us/enroll" class="become_student_link">
+
+              <h4>Become a Student </h4>
+              </a>
+              <a href="https://globalmilestone.org/us/join" class = "become_tutor_link">
+
+              <h4> Become a Tutor</h4>
+              </a>
+              <a href="pages/about.html" class = "about_link">
+              <h4> About Us   </h4>
+              </a>
+
+              <a href="pages/under_construction.html" class = "login_link">
+              <h4>Login</h4>
+              </a>
+              <nav class = "lang_switch">
+                <a class = "lang" href = "https://cn.globalmilestone.org/index.html"><img src = "{% static "pages/img/icons/flags/china.png" %}" alt = "中国"/><p> 中国</p></a>  <a class = "lang"  href = "https://mx.globalmilestone.org/index.html"><img src = "{% static "pages/img/icons/flags/mexico.png" %}" alt = "Mexico"/><p> M&#233;xico</p></a>
+              </nav>
+
+            </ul>
+
+          </div>
+
+      </nav>
+
+
+
+
+    </header>
+{% block content %}
+
+{% endblock %}
+
+      <footer id = "footer">
+        <div class = "footer_wrapper">
+        <small>Found a bug or a problem with the website? Email me at&nbsp;<a href="mailto:sasha@globalmilestone.org">sasha@globalmilestone.org</a>.</small>
+        <br/>
+        <small> Copyright &copy; 2020 Global Milestone Club. All Rights Reserved.</small>
+        </div>
+      </footer>
+  </body>
+</html>

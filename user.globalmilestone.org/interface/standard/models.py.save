@@ -1,0 +1,56 @@
+from django.db import models
+
+# Create your models here.
+class Student (models.Model):
+	first_name = models.CharField(max_length = 100, default = "")
+	last_name = models.CharField(max_length = 100, default = "")
+	age = models.IntegerField(default = 1)
+	us_grade = models.IntegerField(default = 1)
+	placement_code = models.CharField(max_length = 1000, default = "")
+	contact_email = models.EmailField(default = "")
+	gclass_email = models.EmailField(default = "")
+	slack_email = models.EmailField(default = "")
+	courses_enrolled = models.CharField(max_length = 1000, default = "")
+	behavioral_comment = models.TextField(default = "")
+	academic_comment = models.TextField(default = "")
+	misc_comment = models.TextField(default = "")
+	attendance_record = models.TextField(default = "")
+	academic_record = models.TextField(default = "")
+	behavioral_record = models.TextField(default = "")
+	admin_extra = models.TextField(default = "")
+	random_id = models.CharField(default = "", max_length = 100)
+	def __str__(self):
+		return "Student"+self.first_name+self.last_name+self.random_id def __str__(self):
+                return "Student"+self.first_name+self.last_name+self.random_id
+
+class Tutor(models.Model):
+	first_name = models.CharField(max_length = 100, default = "")
+	last_name = models.CharField(max_length = 100, default = "")
+	contact_email = models.EmailField(default = "")
+	age = models.IntegerField(default = 1)
+	us_grade = models.IntegerField(default = 1 )
+	slack_email = models.EmailField(default = "")
+	gclass_email = models.EmailField(default = "")
+	course_assignment_code  = models.CharField(max_length = 1000, default = "")
+	attendance_record = models.TextField(default = "")
+	admin_extra = models.TextField(default = "")
+	random_id = models.CharField(default = "", max_length = 100)
+
+class Course(models.Model):
+	full_name = models.CharField(max_length = 100, default = "")
+	abbrev_name = models.CharField(max_length = 100, default = "")
+	division = models.CharField(max_length = 100, default = "")
+	subdivision = models.CharField(max_length = 100, default = "")
+	level = models.IntegerField(default = 0)
+	tutors_teaching = models.TextField(default = "")
+	students_enrolled = models.TextField(default = "")
+	subject_leader_id = models.CharField(default = "", max_length=100)
+	primary_contact = models.EmailField(default = "")
+
+class Session(models.Model):
+	start_time = models.DateTimeField()
+	end_time = models.DateTimeField()
+	tutor_id = models.CharField(max_length = 100, default = "")
+	students_attended = models.TextField(default = "")
+	session_name = models.CharField(max_length = 100, default = "")
+	

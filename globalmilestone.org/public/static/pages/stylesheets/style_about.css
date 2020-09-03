@@ -1,0 +1,321 @@
+
+body {
+  position: absolute;
+  width:100%;
+  height:100%;
+  overflow-x:hidden;
+}
+
+/* @media-independent code */
+
+
+/* Header*/
+
+
+
+/* Landing Section: */
+.landing {
+  height: 85vh;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing span {
+  color: #e7803b;
+}
+
+.landing_inner {
+  text-align: left;
+  width: 80%;
+}
+
+.landing{
+  color: #FFFFFF;
+}
+
+.bckg{
+  top: 0;
+  z-index:-9999;
+  position:fixed;
+  width:100%;
+  height:85vh;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ), url(../img/together_img.jpg);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+}
+
+/* --------- */
+
+/* Content Sections */
+
+.content_wrapper {
+  position: absolute;
+  width:100%;
+}
+
+.section_wrapper {
+
+  padding: 50px;
+  background-color:  #F5FAFA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+
+.section_container {
+  padding: 10px;
+  text-align:center;
+  border: 1px solid #e7803b;
+  overflow: hidden;
+  height: 80%;
+  width: 80%;
+}
+.grid_container div{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.founders .grid_container {
+  display: grid;
+  grid-template-columns: [c1] 1fr [c2] 1fr;
+  grid-template-rows: [r1] 1fr [c2] 1fr;
+  grid-template-areas:
+  "crystal athena"
+  "will sasha";
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+#crystal {
+  grid-area: crystal;
+}
+
+#athena {
+  grid-area: athena;
+}
+
+#will {
+  grid-area: will;
+}
+
+#sasha {
+  grid-area: sasha;
+}
+/* Contains the individual little sections */
+
+.tutors .grid_container {
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "arden audrey daniel dax"
+  "eddie eli emily grace"
+  "izzy kasie katelyn katy"
+  "nancy nancy nason nason";
+  column-gap: 20px;
+  row-gap: 40px;
+}
+
+#arden {
+  grid-area: arden;
+}
+#audrey  {
+  grid-area: audrey;
+}
+#daniel {
+  grid-area: daniel;
+}
+#dax {
+  grid-area: dax;
+}
+#eddie {
+  grid-area: eddie;
+}
+#eli {
+  grid-area: eli;
+}
+#emily {
+  grid-area: emily;
+}
+#grace {
+  grid-area: grace;
+}
+#izzy {
+  grid-area: izzy;
+}
+#kasie {
+  grid-area: kasie;
+}
+#katelyn {
+  grid-area: katelyn;
+}
+#katy {
+  grid-area: katy;
+}
+#nancy {
+  grid-area: nancy;
+}
+#nason{
+  grid-area: nason;
+}
+
+.grid_container a{
+  display: block;
+  background-color: #e7803b;
+  color: white;
+  padding: 4px;
+  transition: border .5s cubic-bezier(.22,.47,.11,.92);
+  border-radius: 2px;
+  height: 30px;
+  padding: 4px;
+  margin-top: 6px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.grid_container a:hover {
+  border-top: solid 3px black;
+}
+
+
+
+
+/* ---------- */
+
+
+footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer_wrapper {
+  text-align: center;
+}
+
+
+/* --------- */
+
+
+/* Hover capable devices */
+@media (hover: hover){
+  /*
+  #header {
+    background-color: #000000;
+    transition: background-color 0.2s cubic-bezier(.22,.47,.11,.92), padding 0.3s cubic-bezier(.22,.47,.11,.92);
+
+  }
+  #header:hover {
+    background-color: #000000;
+    padding: 5px;
+  }
+*/
+
+
+
+}
+
+
+/* WIDTH BASED DISTINCTIONS */
+
+/* Desktop */
+
+@media screen and (min-width: 1100px) {
+
+}
+@media screen and (max-aspect-ratio: 1/1) {
+}
+
+
+@media screen and (max-width: 1100px) {
+  .section_wrapper {
+    height: auto;
+  }
+  .section_container {
+    height: 90%;
+    width: 90%;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+  .landing {
+    height: calc(100vw*.5);
+  }
+  .bckg {
+    height: calc(100vw*.5);
+  }
+  .founders .grid_container {
+    grid-template-columns: 1fr;
+    grid-template-rows: [r1] 1fr [r2] 1fr [r3] 1fr [r4] 1fr [r5];
+    grid-template-areas:
+    "crystal"
+    "athena"
+    "will"
+    "sasha";
+  }
+  .section_container {
+    padding: 20px;
+  }
+
+  .tutors .grid_container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "arden audrey"
+    "daniel dax"
+    "eddie eli"
+    "emily grace"
+    "izzy kasie"
+    "katelyn katy"
+    "nancy nason";
+
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .tutors .grid_container {
+    grid-template-columns: 1fr;
+    grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "arden"
+    "audrey"
+    "daniel"
+    "dax"
+    "eddie"
+    "eli"
+    "emily"
+    "grace"
+    "izzy "
+    "kasie"
+    "katelyn "
+    "katy"
+    "nancy "
+    "nason";
+
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+
+}
+
+/* HEIGHT BASED DISTINCTIONS */

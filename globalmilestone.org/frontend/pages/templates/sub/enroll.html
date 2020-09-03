@@ -1,0 +1,105 @@
+{% extends "../base_header_footer.html" %}
+
+{% load static %}
+{% block head %}
+<link rel = "stylesheet", type = "text/css", href = "{% static "pages/stylesheets/style_become_student.css" %}">
+<script src = "{% static "pages/scripts/become_student.js" %}"></script>
+{% endblock %}
+{% block content %}
+    <section class="content_wrapper">
+        <section class = "classes_wrapper section_wrapper">
+          <div class = "core_classes section_container">
+            <h2> Core Classes </h2>
+            <div id = "new_student">
+                        <h3>First time enrolling? Start here:</h3>
+                        <p>Email our U.S. program director at <a href="mailto:sasha@globalmilestone.org">sasha@globalmilestone.org</a></p>
+              </div>
+
+          <h3>Already a student? Join some classes:</h3>
+          <p>To join, email the person listed under "contact".</p>
+          <div class = "grid_container">
+
+
+              <div id = "core_1">
+              <h4>Writing</h4>
+                      <img src="../img/icons/writing.svg" alt="Writing"  title="Writing by Kaleo from the Noun Project" height="150"/>
+                      <p>Contact: <a class="email" href="mailto:crystal@globalmilestone.org">crystal@globalmilestone.org</a></p>
+                      <a class="moreinfo">Click for more info &#x25B6</a>
+            </div>
+
+            <div id = "core_2">
+              <h4>Reading</h4>
+              <img src="../img/icons/reading.svg" alt="Reading" title = "Reading by Vectorstall from the Noun Project" height="150"/>
+              <p>Contact: <a class="email" href="mailto:athena@globalmilestone.org">athena@globalmilestone.org</a></p>
+              <a>Click for more info</a>
+            </div>
+
+            <div id = "core_3">
+              <h4>Math - Standard</h4>
+            <img src="../img/icons/math_std.svg" alt="Math" title="Math by shashank singh from the Noun Project" height="150"/>
+            <p>Contact: <a class="email" href="mailto:sasha@globalmilestone.org">sasha@globalmilestone.org</a></p>
+            <a>Click for more info</a>
+            </div>
+
+
+            <div id = "core_4">
+              <h4>History</h4>
+            <img src="../img/icons/history.svg" alt="History" title = "Castle by Made from the Noun Project" height="150"/>
+            <p>Contact: <a class="email" href="mailto:will@globalmilestone.org">will@globalmilestone.org</a></p>
+            <a>Click for more info</a>
+            </div>
+
+
+          </div>
+                  <h3>Have suggestions for a new class?  </h3><p>Email our Curriculum Director at <a href = "mailto:crystal@globalmilestone.org">crystal@globalmilestone.org</a></p>
+        </div>
+
+        <div class = "language_classes section_container">
+          <h2> Language Classes </h2>
+          <div id = "new_student">
+                      <h3>First time enrolling? Start here:</h3>
+                      <p>Email our U.S. program director at <a href="mailto:sasha@globalmilestone.org">sasha@globalmilestone.org</a></p>
+            </div>
+
+        <h3>Already a student? Join some classes:</h3>
+        <p>To join, email the person listed under "contact".</p>
+        <div class = "grid_container">
+
+
+          <div id = "spanish">
+            <h4>Spanish</h4>
+          <img src="../img/icons/spanish.svg" alt="Spanish" title = "spanish by corpus delicti from the Noun Project" height="150"/>
+          <p>Contact: <a class="email" href="mailto:athena@globalmilestone.org">athena@globalmilestone.org</a></p>
+          <a>Click for more info</a>
+          </div>
+
+        </div>
+                <h3>Have suggestions for a new class?  </h3><p>Email our Curriculum Director at <a href = "mailto:crystal@globalmilestone.org">crystal@globalmilestone.org</a></p>
+      </div>
+
+      <div class = "extracurricular_classes section_container">
+        <h2> Elective Classes </h2>
+        <div id = "new_student">
+                    <h3>First time enrolling? Start here:</h3>
+                    <p>Email our U.S. program director at <a href="mailto:sasha@globalmilestone.org">sasha@globalmilestone.org</a></p>
+          </div>
+
+      <h3>Already a student? Join some classes:</h3>
+      <p>To join, email the person listed under "contact".</p>
+      <div class = "grid_container">
+
+
+        <div id = "spanish">
+          <h4>Spanish</h4>
+        <img src="../img/icons/spanish.svg" alt="Spanish" title = "spanish by corpus delicti from the Noun Project" height="150"/>
+        <p>Contact: <a class="email" href="mailto:athena@globalmilestone.org">athena@globalmilestone.org</a></p>
+        <a>Click for more info</a>
+        </div>
+
+      </div>
+              <h3>Have suggestions for a new class?  </h3><p>Email our Curriculum Director at <a href = "mailto:crystal@globalmilestone.org">crystal@globalmilestone.org</a></p>
+    </div>
+        </section>
+
+    </section>
+    {% endblock %}
