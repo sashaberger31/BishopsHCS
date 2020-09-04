@@ -53,36 +53,25 @@ body {
   grid-template-columns:  1fr 1fr ;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
-  "writing reading"
-  "math history";
+  "core_1 core_2"
+  "core_3 core_4";
   column-gap: 20px;
   row-gap: 70px;
 }
 
-#writing {
-  grid-area: writing;
+#core_1 {
+  grid-area: core_1;
 }
-#reading {
-  grid-area: reading;
+#core_2 {
+  grid-area: core_2;
 }
-#math {
-  grid-area: math;
+#core_3 {
+  grid-area: core_3;
 }
-#history {
-  grid-area: history;
+#core_4 {
+  grid-area: core_4;
 }
-#amc {
-  grid-area: amc;
-}
-#spanish {
-  grid-area: spanish;
-}
-#chinese{
-  grid-area: chinese;
-}
-#music {
-  grid-area: music;
-}
+
 
 .language_classes .grid_container {
   display: grid;

@@ -183,6 +183,24 @@ nav a:hover:not(.hamburger_parent):not(.lang):not(.current){
 }
 
 
+footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer_wrapper {
+  text-align: center;
+}
+
+.content_wrapper {
+  position: absolute;
+  width:100%;
+}
+
 
 @media screen and (max-width: 990px) {
   .navlist a:not(.hamburger_parent):not(.lang) {
@@ -271,6 +289,9 @@ nav a:hover:not(.hamburger_parent):not(.lang):not(.current){
     }
     .header_dummy{
       height: 10vh;
+    }
+    .bckg{
+      top: 10vh;
     }
   }
 

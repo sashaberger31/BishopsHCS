@@ -64,7 +64,9 @@
               <h4>Login</h4>
               </a>
               <nav class = "lang_switch">
-                <a class = "lang" href = "https://cn.globalmilestone.org/index.html"><img src = "{% static "pages/img/icons/flags/china.png" %}" alt = "中国"/><p> 中国</p></a>  <a class = "lang"  href = "https://mx.globalmilestone.org/index.html"><img src = "{% static "pages/img/icons/flags/mexico.png" %}" alt = "Mexico"/><p> M&#233;xico</p></a>
+                {% block lang_switch %}
+              
+                {% endblock %}
               </nav>
 
             </ul>
@@ -77,16 +79,19 @@
 
 
     </header>
+    <section class="content_wrapper">
 {% block content %}
 
-{% endblock %}
 
-      <footer id = "footer">
-        <div class = "footer_wrapper">
-        <small>Found a bug or a problem with the website? Email me at&nbsp;<a href="mailto:sasha@globalmilestone.org">sasha@globalmilestone.org</a>.</small>
-        <br/>
-        <small> Copyright &copy; 2020 Global Milestone Club. All Rights Reserved.</small>
-        </div>
-      </footer>
+{% endblock %}
+<footer id = "footer">
+  <div class = "footer_wrapper">
+  <small>Found a bug or a problem with the website? Email me at&nbsp;<a href="mailto:sasha@globalmilestone.org">sasha@globalmilestone.org</a>.</small>
+  <br/>
+  <small> Copyright &copy; 2020 Global Milestone Club. All Rights Reserved.</small>
+  </div>
+</footer>
+  </section>
+
   </body>
 </html>

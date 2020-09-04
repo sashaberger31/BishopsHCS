@@ -7,6 +7,12 @@
   <link rel = "stylesheet", type = "text/css", href = "{% static "pages/stylesheets/style_home.css" %}">
   <script src = "{% static "pages/scripts/home.js" %}"></script>
 {% endblock %}
+{% block lang_switch %}
+
+  <a class = "lang" href = "https://globalmilestone.org/{{nonlocal2}}/"><img src = "{% static nonlocallink1 %}" alt = "{{nonlocaltext1|safe}}"/><p> {{nonlocaltext1|safe}}</p></a>
+  <a class = "lang"  href = "https://globalmilestone.org/{{nonlocal1}}/"><img src = "{% static nonlocallink2 %}" alt = "{{nonlocaltext2|safe}}"/><p>{{nonlocaltext2|safe}}</p></a>
+{% endblock %}
+
 {% block content %}
 
 
@@ -21,7 +27,6 @@
 <div class = "bckg">
 </div>
 
-<section class="content_wrapper">
   <section class = "mission_wrapper section_wrapper">
     <div class = "mission section_container slide_left">
       <h2> Our Mission </h2>
@@ -103,6 +108,6 @@
   </div>
 
 </section>
-</section>
+
 
 {% endblock %}

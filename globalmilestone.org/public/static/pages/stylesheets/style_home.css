@@ -47,10 +47,7 @@ body {
 /* --------- */
 
 /* Content Sections */
-.content_wrapper {
-  position: absolute;
-  width:100%;
-}
+
 
 /* The section wrapper does not slide */
 .section_wrapper {
@@ -227,19 +224,6 @@ images in the center */
     border-radius: 2px;
 }
 
-
-footer {
-  background-color: black;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.footer_wrapper {
-  text-align: center;
-}
 
 
 /* --------- */
