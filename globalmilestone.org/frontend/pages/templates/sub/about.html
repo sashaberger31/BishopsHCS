@@ -1,79 +1,19 @@
-<!DOCTYPE html>
-<html>
-  <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> About Us | The Global Milestone Club </title>
-        <link rel="stylesheet" href="https://use.typekit.net/wvo2aqc.css">
-        <link rel = "stylesheet", type = "text/css", href = "../stylesheets/style_all.css">
-        <link rel = "stylesheet", type = "text/css", href = "../stylesheets/style_about.css">
-        <link rel = "stylesheet", type = "text/css", href = "../stylesheets/header.css">
-        <script
-        src="https://code.jquery.com/jquery-3.5.0.min.js"
-        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
-        crossorigin="anonymous"></script>
-        <script src = "../scripts/header.js"></script>
-  </head>
+{% extends "../base_header_footer.html" %}
+{% load static %}
 
-  <body>
-    <!-- Header and Dummy combo -->
-    <div class = "header_dummy">
-    </div>
+{% block head %}
+  <link rel = "stylesheet", type = "text/css", href = "{% static "pages/stylesheets/style_about.css" %}">
+  <script src = "{% static "pages/scripts/about.js" %}"></script>
+{% endblock %}
 
-    <header id = "header">
-        <a class = "logo" href="../index.html"><img src = "../img/icons/Logo.svg"/></a>
-      <nav>
-
-
-        <div class = "navlist">
-          <ul>
-            <a class= "hamburger_parent">
-
-              <div class = "hamburger">
-                <div class = "hamburger_1">
-                </div>
-                <div class="hamburger_mid">
-                </div>
-                <div class = "hamburger_2">
-                </div>
-
-              </div>
-            </a>
-
-            <a href="../index.html">
-            <h4>Home</h4>
-            </a>
-            <a href="become_student.html">
-
-              <h4>Become a Student </h4>
-              </a>
-  <a href="become_tutor.html" >
-
-              <h4> Become a Tutor</h4>
-              </a>
-              <a class = "current" href="../pages/about.html">
-              <h4> About Us   </h4>
-              </a>
-
-              <a href="under_construction.html">
-              <h4>Login</h4>
-              </a>
-              <nav class = "lang_switch">
-                <a class = "lang" href = "https://cn.globalmilestone.org/pages/about.html"><img src = "../img/icons/flags/china.png" alt = "中国"/><p> 中国</p></a>  <a class = "lang" href = "https://mx.globalmilestone.org/pages/about.html"><img src = "../img/icons/flags/mexico.png" alt = "Mexico"/><p> M&#233;xico</p></a>
-              </nav>
-
-            </ul>
-
-          </div>
-
-      </nav>
+{% block langswitch %}
+<a class = "lang" href = "https://globalmilestone.org/{{nonlocal2}}/about"><img src = "{% static nonlocallink1 %}" alt = "{{nonlocaltext1|safe}}"/><p> {{nonlocaltext1|safe}}</p></a>
+<a class = "lang"  href = "https://globalmilestone.org/{{nonlocal1}}/about"><img src = "{% static nonlocallink2 %}" alt = "{{nonlocaltext2|safe}}"/><p>{{nonlocaltext2|safe}}</p></a>
+{% endblock %}
 
 
 
-
-    </header>
-
-
+{% block content %}
     <!-- Landing Image  -->
     <div class = "bckg">
     </div>
@@ -82,31 +22,47 @@
         <h1>About Us</h1>
       </section>
     </main>
-
-    <section class="content_wrapper">
         <section class = "founders_wrapper section_wrapper">
         <div class = "founders section_container">
           <h2> Founders </h2>
           <div class = "grid_container">
-            <div id = "crystal">
-                          <h4>Crystal Li</h4>
+            <div id = "leaders1">
+                          <h4>{{ Leaders_1_Name }}</h4>
                           <img src="people/crystal/crystal_icon.jpg" alt="Crystal Li" height="150"/>
                           <a href="under_construction.html">Click for more info</a>
             </div>
 
-            <div id = "athena">
+            <div id = "leaders2">
                       <h4>Athena Hernández</h4>
                       <img src="people/athena/athena_icon.jpeg" alt="Athena Hernandez" height="150"/>
                       <a href="under_construction.html">Click for more info</a>
             </div>
 
-            <div id = "will">
+            <div id = "leaders3">
               <h4>Will Keefe</h4>
               <img src="people/will/will_icon.jpeg" alt="Will Keefe" height="150"/>
               <a href="under_construction.html">Click for more info</a>
             </div>
 
-            <div id = "sasha">
+            <div id = "leaders4">
+              <h4>Sasha Berger</h4>
+            <img src="people/sasha/sasha_icon.jpg" alt="Sasha Berger" height="150"/>
+            <a href="under_construction.html">Click for more info</a>
+            </div>
+
+            <div id = "leaders5">
+              <h4>Sasha Berger</h4>
+            <img src="people/sasha/sasha_icon.jpg" alt="Sasha Berger" height="150"/>
+            <a href="under_construction.html">Click for more info</a>
+            </div>
+
+            <div id = "leaders6">
+              <h4>Sasha Berger</h4>
+            <img src="people/sasha/sasha_icon.jpg" alt="Sasha Berger" height="150"/>
+            <a href="under_construction.html">Click for more info</a>
+            </div>
+
+            <div id = "leaders7">
               <h4>Sasha Berger</h4>
             <img src="people/sasha/sasha_icon.jpg" alt="Sasha Berger" height="150"/>
             <a href="under_construction.html">Click for more info</a>
@@ -197,15 +153,4 @@
           </div>
         </div>
         </section>
-
-
-      <footer id = "footer">
-        <div class = "footer_wrapper">
-        <small>Found a bug or a problem with the website? Email me at&nbsp;<a href="mailto:sasha@globalmilestone.org">sasha@globalmilestone.org</a>.</small>
-        <br/>
-        <small> Copyright &copy; 2020 Global Milestone Club. All Rights Reserved.</small>
-        </div>
-      </footer>
-    </section>
-  </body>
-</html>
+{% endblock %}

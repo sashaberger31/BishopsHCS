@@ -11,5 +11,5 @@ function onHamburgerClickSecond() {
 }
 
 $(function() {
-    $(".hamburger_parent").on("click", onHamburgerClickFirst)
+    $(".hamburger_parent").on("click", onHamburgerClickFirst);
 });
