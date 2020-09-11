@@ -10,9 +10,13 @@ class WebSectionItem(admin.ModelAdmin):
 class WebTextItem(admin.ModelAdmin):
     search_fields = ['parent_page__name', 'name', 'parent_section__name']
     autocomplete_fields = ['parent_section']
-    
+
+class WebImgItem(admin.ModelAdmin):
+    search_fields = ['parent_page__name', 'name', 'parent_section__name']
+    autocomplete_fields = ['parent_section']
+
 admin.site.register(WebText, WebTextItem)
 admin.site.register(WebSection, WebSectionItem)
-admin.site.register(WebImg)
+admin.site.register(WebImg, WebImgItem)
 admin.site.register(WebPage)
 admin.site.register(WebInnerLink)

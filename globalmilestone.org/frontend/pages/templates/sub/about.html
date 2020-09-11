@@ -4,6 +4,24 @@
 {% block head %}
   <link rel = "stylesheet", type = "text/css", href = "{% static "pages/stylesheets/style_about.css" %}">
   <script src = "{% static "pages/scripts/about.js" %}"></script>
+  <style>
+  .tutors .grid_container {
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:{% for row in Rows %}
+      {{ row|safe }}
+    {% endfor %}
+    column-gap: 20px;
+    row-gap: 40px;
+  }
+
+  {% for tutor in Tutors %}
+    #tutors{{tutor.i}} {
+      grid-area: {{ "tutor"|add:tutor.i }};
+    }
+  {% endfor %}
+  </style>
 {% endblock %}
 
 {% block langswitch %}
@@ -14,6 +32,7 @@
 
 
 {% block content %}
+
     <!-- Landing Image  -->
     <div class = "bckg">
     </div>
@@ -24,48 +43,55 @@
     </main>
         <section class = "founders_wrapper section_wrapper">
         <div class = "founders section_container">
-          <h2> Founders </h2>
+          <h2> Leadership </h2>
           <div class = "grid_container">
             <div id = "leaders1">
-                          <h4>{{ Leaders_1_Name }}</h4>
-                          <img src="people/crystal/crystal_icon.jpg" alt="Crystal Li" height="150"/>
-                          <a href="under_construction.html">Click for more info</a>
+                <h4>{{ Leaders_1_Name }}</h4>
+                <h6> {{Leaders_1_Title}}</h6>
+                <img src="{% static "pages/"|add:Leaders_1_Path|safe %}" alt="{{ Leaders_1_Alt }}" height="150"/>
+                <a href="under_construction.html">Click for more info</a>
             </div>
 
             <div id = "leaders2">
-                      <h4>Athena Hernández</h4>
-                      <img src="people/athena/athena_icon.jpeg" alt="Athena Hernandez" height="150"/>
-                      <a href="under_construction.html">Click for more info</a>
+                <h4>{{ Leaders_2_Name }}</h4>
+                <h6> {{Leaders_2_Title}}</h6>
+                <img src="{% static "pages/"|add:Leaders_2_Path|safe %}" alt="{{ Leaders_2_Alt }}" height="150"/>
+                <a href="under_construction.html">Click for more info</a>
             </div>
 
             <div id = "leaders3">
-              <h4>Will Keefe</h4>
-              <img src="people/will/will_icon.jpeg" alt="Will Keefe" height="150"/>
+              <h4>{{ Leaders_3_Name }}</h4>
+              <h6> {{Leaders_3_Title}}</h6>
+              <img src="{% static "pages/"|add:Leaders_3_Path|safe %}" alt="{{ Leaders_3_Alt }}" height="150"/>
               <a href="under_construction.html">Click for more info</a>
             </div>
 
             <div id = "leaders4">
-              <h4>Sasha Berger</h4>
-            <img src="people/sasha/sasha_icon.jpg" alt="Sasha Berger" height="150"/>
+              <h4>{{ Leaders_4_Name }}</h4>
+              <h6> {{Leaders_4_Title}}</h6>
+            <img src="{% static "pages/"|add:Leaders_4_Path|safe %}" alt="{{ Leaders_4_Alt }}" height="150"/>
             <a href="under_construction.html">Click for more info</a>
             </div>
 
             <div id = "leaders5">
-              <h4>Sasha Berger</h4>
-            <img src="people/sasha/sasha_icon.jpg" alt="Sasha Berger" height="150"/>
+              <h4>{{ Leaders_5_Name }}</h4>
+              <h6> {{Leaders_5_Title}}</h6>
+            <img src="{% static "pages/"|add:Leaders_5_Path|safe %}" alt="{{ Leaders_5_Alt }}" height="150"/>
             <a href="under_construction.html">Click for more info</a>
             </div>
 
             <div id = "leaders6">
-              <h4>Sasha Berger</h4>
-            <img src="people/sasha/sasha_icon.jpg" alt="Sasha Berger" height="150"/>
+              <h4>{{ Leaders_6_Name }}</h4>
+              <h6> {{Leaders_6_Title}}</h6>
+            <img src="{% static "pages/"|add:Leaders_6_Path|safe %}" alt="{{ Leaders_6_Alt }}" height="150"/>
             <a href="under_construction.html">Click for more info</a>
             </div>
 
             <div id = "leaders7">
-              <h4>Sasha Berger</h4>
-            <img src="people/sasha/sasha_icon.jpg" alt="Sasha Berger" height="150"/>
-            <a href="under_construction.html">Click for more info</a>
+              <h4>{{ Leaders_7_Name }}</h4>
+              <h6> {{Leaders_7_Title}}</h6>
+              <img src="{% static "pages/"|add:Leaders_7_Path|safe %}" alt="{{ Leaders_7_Alt }}" height="150"/>
+              <a href="under_construction.html">Click for more info</a>
             </div>
           </div>
         </div>
@@ -73,83 +99,17 @@
 
         <section class = "tutors_wrapper section_wrapper">
         <div class = "tutors section_container">
-          <h2> Our Tutors </h2>
+          <h2> Tutors </h2>
           <div class = "grid_container">
-            <div id = "arden">
-              <h4>Arden</h4>
-                          <img src="people/arden/arden_icon.jpeg" alt="Arden's Photo" height="150"/>
-                          <a href="under_construction.html">Click for more info</a>
-            </div>
-
-            <div id = "audrey">
-              <h4>Audrey</h4>
-                      <img src="people/audrey/audrey_icon.jpg" alt="Audrey's Photo" height="150"/>
+            {% for tutor in Tutors %}
+              <div id = "tutors{{ tutor.i }}">
+                <h4> {{ tutor.Name }} </h4>
+                <h6> {{ tutor.Title }} </h6>
+                      <img src="{% static "pages/"|add:tutor.Path|safe %}" alt=" {{ tutor.Alt }}" height="150"/>
                       <a href="under_construction.html">Click for more info</a>
-            </div>
+              </div>
+            {% endfor %}
 
-            <div id = "daniel">
-              <h4>Daniel</h4>
-              <img src="people/daniel/daniel_icon.jpg" alt="Daniel's Photo" height="150"/>
-              <a href="under_construction.html">Click for more info</a>
-            </div>
-
-            <div id = "dax">
-              <h4>Dax</h4>
-            <img src="../img/icons/university_1.svg" alt="Dax's Photo" height="150"/>
-            <a href="under_construction.html">Click for more info</a>
-            </div>
-
-            <div id = "eddie">
-              <h4>Eddie</h4>
-            <img src="people/eddie/eddie_icon.jpg" alt="Eddie's Photo" height="150"/>
-            <a href="under_construction.html">Click for more info</a>
-            </div>
-            <div id = "eli">
-              <h4>Eli</h4>
-            <img src="../img/icons/university_1.svg" alt="Eli's Photo" height="150"/>
-            <a href="under_construction.html">Click for more info</a>
-            </div>
-            <div id = "emily">
-              <h4>Emily</h4>
-            <img src="people/emily/emily_icon.jpg" alt="Emily's Photo" height="150"/>
-            <a href="under_construction.html">Click for more info</a>
-            </div>
-            <div id = "grace">
-              <h4>Grace</h4>
-            <img src="people/grace/grace_icon.jpg" alt="Grace's Photo" height="150"/>
-            <a href="under_construction.html">Click for more info</a>
-            </div>
-            <div id = "izzy">
-              <h4>Izzy</h4>
-            <img src="people/izzy/izzy_icon.jpg" alt="Izzy's Photo" height="150"/>
-            <a href="under_construction.html">Click for more info</a>
-            </div>
-            <div id = "kasie">
-              <h4>Kasie</h4>
-            <img src="../img/icons/university_1.svg" alt="Kasie's Photo" height="150"/>
-            <a href="under_construction.html">Click for more info</a>
-            </div>
-            <div id = "katelyn">
-              <h4>Katelyn</h4>
-            <img src="people/katelyn/katelyn_icon.jpg" alt="Katelyn's Photo" height="150"/>
-            <a href="under_construction.html">Click for more info</a>
-            </div>
-
-            <div id = "katy">
-              <h4>Katy</h4>
-            <img src="people/katy/katy_icon.jpg" alt="Katy's Photo" height="150"/>
-            <a href="under_construction.html">Click for more info</a>
-            </div>
-            <div id = "nancy">
-              <h4>Nancy</h4>
-            <img src="people/nancy/nancy_icon.jpeg" alt="Nancy's Photo" height="150"/>
-            <a href="under_construction.html">Click for more info</a>
-            </div>
-            <div id = "nason">
-              <h4>Nason</h4>
-            <img src="people/nason/nason_icon.jpg" alt="Nason's Photo" height="150"/>
-            <a href="under_construction.html">Click for more info</a>
-            </div>
           </div>
         </div>
         </section>

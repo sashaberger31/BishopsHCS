@@ -128,61 +128,7 @@ body {
 
 /* Contains the individual little sections */
 
-.tutors .grid_container {
-  display: grid;
-  grid-template-columns:  1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-areas:
-  "arden audrey daniel dax"
-  "eddie eli emily grace"
-  "izzy kasie katelyn katy"
-  "nancy nancy nason nason";
-  column-gap: 20px;
-  row-gap: 40px;
-}
 
-#arden {
-  grid-area: arden;
-}
-#audrey  {
-  grid-area: audrey;
-}
-#daniel {
-  grid-area: daniel;
-}
-#dax {
-  grid-area: dax;
-}
-#eddie {
-  grid-area: eddie;
-}
-#eli {
-  grid-area: eli;
-}
-#emily {
-  grid-area: emily;
-}
-#grace {
-  grid-area: grace;
-}
-#izzy {
-  grid-area: izzy;
-}
-#kasie {
-  grid-area: kasie;
-}
-#katelyn {
-  grid-area: katelyn;
-}
-#katy {
-  grid-area: katy;
-}
-#nancy {
-  grid-area: nancy;
-}
-#nason{
-  grid-area: nason;
-}
 
 .grid_container a{
   display: block;

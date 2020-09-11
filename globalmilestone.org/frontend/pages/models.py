@@ -72,7 +72,7 @@ class WebImg(models.Model):
     parent_page = models.ForeignKey(WebPage, on_delete = models.CASCADE, null = True)
     name = models.CharField(default = "", max_length = 100)
     def __str__(self):
-        return "WebImg" + str(self.name)
+        return self.parent_section.__str__() + ":" + str(self.name)
 
 class WebInnerLink(models.Model):
     dev_type = "use_frontend"
