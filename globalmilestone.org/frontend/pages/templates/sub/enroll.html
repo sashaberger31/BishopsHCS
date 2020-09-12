@@ -5,6 +5,16 @@
 <link rel = "stylesheet", type = "text/css", href = "{% static "pages/stylesheets/style_become_student.css" %}">
 <script src = "{% static "pages/scripts/become_student.js" %}"></script>
 {% endblock %}
+{% block localeA %}{{locale}}{% endblock %}
+{% block localeB %}{{locale}}{% endblock %}
+{% block localeC %}{{locale}}{% endblock %}
+{% block localeD %}{{locale}}{% endblock %}
+
+{% block lang_switch %}
+<a class = "lang" href = "https://globalmilestone.org/{{nonlocal1}}/about"><img src = "{% static nonlocallink1 %}" alt = "{{nonlocaltext1|safe}}"/><p> {{nonlocaltext1|safe}}</p></a>
+<a class = "lang"  href = "https://globalmilestone.org/{{nonlocal2}}/about"><img src = "{% static nonlocallink2 %}" alt = "{{nonlocaltext2|safe}}"/><p>{{nonlocaltext2|safe}}</p></a>
+{% endblock %}
+
 {% block content %}
     <section class="content_wrapper">
         <section class = "classes_wrapper section_wrapper">

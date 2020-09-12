@@ -37,7 +37,7 @@ body {
 }
 
 .bckg{
-  top: 0;
+
   z-index:-9999;
   position:fixed;
   width:100%;
@@ -85,19 +85,58 @@ body {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-}
-.founders .grid_container {
-  display: grid;
-  grid-template-columns: [c1] 1fr [c2] 1fr [c3] 1fr;
-  grid-template-rows: auto;
-  grid-template-areas:
-  "one two three"
-  "four five six"
-  ". seven .";
-  column-gap: 20px;
-  row-gap: 20px;
+  padding: 10px;
+  transition: background-color 0.4s cubic-bezier(.22,.47,.11,.92), color 0.4s cubic-bezier(.22,.47,.11,.92);
 }
 
+@media screen and (hover: hover){
+  .grid_container div.grid0:hover{
+    background-color: #e7803b;
+  }
+  .grid_container div.grid2:hover{
+    background-color: #c6cccc;
+  }
+}
+
+/*#e7803b;*/
+.founders .grid_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "one two"
+  "three four"
+  "five six"
+  "seven .";
+
+}
+
+@media screen and (min-width: 800px){
+  .founders .grid_container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "one two three"
+    "four five six"
+    ". seven .";
+  }
+}
+
+
+@media screen and (max-width: 600px){
+  .founders .grid_container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four"
+    "five"
+    "six"
+    "seven";
+  }
+}
 #leaders1 {
   grid-area: one;
 }
@@ -130,26 +169,6 @@ body {
 
 
 
-.grid_container a{
-  display: block;
-  background-color: #e7803b;
-  color: white;
-  padding: 4px;
-  transition: border .5s cubic-bezier(.22,.47,.11,.92);
-  border-radius: 2px;
-  height: 30px;
-  padding: 4px;
-  margin-top: 6px;
-  width: 150px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-}
-
-.grid_container a:hover {
-  border-top: solid 3px black;
-}
 
 
 
@@ -215,67 +234,26 @@ footer {
 
 }
 
-/*@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .landing {
     height: calc(100vw*.5);
   }
   .bckg {
     height: calc(100vw*.5);
   }
-  .founders .grid_container {
-    grid-template-columns: 1fr;
-    grid-template-rows: [r1] 1fr [r2] 1fr [r3] 1fr [r4] 1fr [r5];
-    grid-template-areas:
-    "crystal"
-    "athena"
-    "will"
-    "sasha";
-  }
+
   .section_container {
-    padding: 20px;
+    padding: 10px 0;
   }
-
-  .tutors .grid_container {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-    "arden audrey"
-    "daniel dax"
-    "eddie eli"
-    "emily grace"
-    "izzy kasie"
-    "katelyn katy"
-    "nancy nason";
-
+  .section_wrapper {
+    padding: 20px;
   }
 }
 
 @media screen and (max-width: 599px) {
-  .tutors .grid_container {
-    grid-template-columns: 1fr;
-    grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-    "arden"
-    "audrey"
-    "daniel"
-    "dax"
-    "eddie"
-    "eli"
-    "emily"
-    "grace"
-    "izzy "
-    "kasie"
-    "katelyn "
-    "katy"
-    "nancy "
-    "nason";
-
-  }
-
-}
 
 @media screen and (max-width: 450px) {
 
 }
-*/
+
 /* HEIGHT BASED DISTINCTIONS */

@@ -7,26 +7,51 @@
   <style>
   .tutors .grid_container {
     display: grid;
-    grid-template-columns:  1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:{% for row in Rows %}
-      {{ row|safe }}
-    {% endfor %}
-    column-gap: 20px;
-    row-gap: 40px;
+    grid-template-columns: {{ TemplateColumns.brk1|safe }};
+    grid-template-rows: {{ TemplateRows.brk1|safe }};
+    grid-template-areas: {{ GAString.brk1|safe }}
+
+  }
+
+  @media screen and (min-width: 800px) {
+    .tutors .grid_container {
+      grid-template-columns: {{ TemplateColumns.brk2|safe }};
+      grid-template-rows: {{ TemplateRows.brk2|safe }};
+      grid-template-areas: {{ GAString.brk2|safe }}
+    }
+  }
+
+  @media screen and (min-width: 950px) {
+    .tutors .grid_container {
+      grid-template-columns: {{ TemplateColumns.brk3|safe }};
+      grid-template-rows: {{ TemplateRows.brk3|safe }};
+      grid-template-areas: {{ GAString.brk3|safe }}
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .tutors .grid_container {
+      grid-template-columns: {{ TemplateColumns.brk0|safe }};
+      grid-template-rows: {{ TemplateRows.brk0|safe }};
+      grid-template-areas: {{ GAString.brk0|safe }}
+    }
   }
 
   {% for tutor in Tutors %}
     #tutors{{tutor.i}} {
-      grid-area: {{ "tutor"|add:tutor.i }};
+      grid-area: {{ tutor.GridName }};
     }
   {% endfor %}
   </style>
 {% endblock %}
+{% block localeA %}{{locale}}{% endblock %}
+{% block localeB %}{{locale}}{% endblock %}
+{% block localeC %}{{locale}}{% endblock %}
+{% block localeD %}{{locale}}{% endblock %}
 
-{% block langswitch %}
-<a class = "lang" href = "https://globalmilestone.org/{{nonlocal2}}/about"><img src = "{% static nonlocallink1 %}" alt = "{{nonlocaltext1|safe}}"/><p> {{nonlocaltext1|safe}}</p></a>
-<a class = "lang"  href = "https://globalmilestone.org/{{nonlocal1}}/about"><img src = "{% static nonlocallink2 %}" alt = "{{nonlocaltext2|safe}}"/><p>{{nonlocaltext2|safe}}</p></a>
+{% block lang_switch %}
+<a class = "lang" href = "https://globalmilestone.org/{{nonlocal1}}/about"><img src = "{% static nonlocallink1 %}" alt = "{{nonlocaltext1|safe}}"/><p> {{nonlocaltext1|safe}}</p></a>
+<a class = "lang"  href = "https://globalmilestone.org/{{nonlocal2}}/about"><img src = "{% static nonlocallink2 %}" alt = "{{nonlocaltext2|safe}}"/><p>{{nonlocaltext2|safe}}</p></a>
 {% endblock %}
 
 
@@ -34,65 +59,74 @@
 {% block content %}
 
     <!-- Landing Image  -->
-    <div class = "bckg">
-    </div>
+
     <main id = "landing" class = "landing main_sections">
       <section class = "landing_inner">
         <h1>About Us</h1>
       </section>
     </main>
+    <div class = "bckg">
+    </div>
         <section class = "founders_wrapper section_wrapper">
         <div class = "founders section_container">
           <h2> Leadership </h2>
           <div class = "grid_container">
-            <div id = "leaders1">
+            <a class = "grid_wrap" href = "#">
+            <div id = "leaders1" class = "grid0">
                 <h4>{{ Leaders_1_Name }}</h4>
                 <h6> {{Leaders_1_Title}}</h6>
                 <img src="{% static "pages/"|add:Leaders_1_Path|safe %}" alt="{{ Leaders_1_Alt }}" height="150"/>
-                <a href="under_construction.html">Click for more info</a>
-            </div>
 
-            <div id = "leaders2">
+            </div>
+          </a>
+          <a class = "grid_wrap" href = "#">
+            <div id = "leaders2" class = "grid2">
                 <h4>{{ Leaders_2_Name }}</h4>
                 <h6> {{Leaders_2_Title}}</h6>
                 <img src="{% static "pages/"|add:Leaders_2_Path|safe %}" alt="{{ Leaders_2_Alt }}" height="150"/>
-                <a href="under_construction.html">Click for more info</a>
-            </div>
 
-            <div id = "leaders3">
+            </div>
+          </a>
+
+          <a class = "grid_wrap" href = "#">
+            <div id = "leaders3" class = "grid0">
               <h4>{{ Leaders_3_Name }}</h4>
               <h6> {{Leaders_3_Title}}</h6>
               <img src="{% static "pages/"|add:Leaders_3_Path|safe %}" alt="{{ Leaders_3_Alt }}" height="150"/>
-              <a href="under_construction.html">Click for more info</a>
-            </div>
 
-            <div id = "leaders4">
+            </div>
+          </a>
+
+          <a class = "grid_wrap" href = "#">
+            <div id = "leaders4" class = "grid2">
               <h4>{{ Leaders_4_Name }}</h4>
               <h6> {{Leaders_4_Title}}</h6>
             <img src="{% static "pages/"|add:Leaders_4_Path|safe %}" alt="{{ Leaders_4_Alt }}" height="150"/>
-            <a href="under_construction.html">Click for more info</a>
             </div>
+          </a>
 
-            <div id = "leaders5">
+          <a class = "grid_wrap" href = "#">
+            <div id = "leaders5" class = "grid0">
               <h4>{{ Leaders_5_Name }}</h4>
               <h6> {{Leaders_5_Title}}</h6>
             <img src="{% static "pages/"|add:Leaders_5_Path|safe %}" alt="{{ Leaders_5_Alt }}" height="150"/>
-            <a href="under_construction.html">Click for more info</a>
             </div>
+          </a>
 
-            <div id = "leaders6">
+          <a class = "grid_wrap" href = "#">
+            <div id = "leaders6" class = "grid2">
               <h4>{{ Leaders_6_Name }}</h4>
               <h6> {{Leaders_6_Title}}</h6>
             <img src="{% static "pages/"|add:Leaders_6_Path|safe %}" alt="{{ Leaders_6_Alt }}" height="150"/>
-            <a href="under_construction.html">Click for more info</a>
             </div>
-
-            <div id = "leaders7">
+          </a>
+          <a class = "grid_wrap" href = "#">
+            <div id = "leaders7" class = "grid0">
               <h4>{{ Leaders_7_Name }}</h4>
               <h6> {{Leaders_7_Title}}</h6>
               <img src="{% static "pages/"|add:Leaders_7_Path|safe %}" alt="{{ Leaders_7_Alt }}" height="150"/>
-              <a href="under_construction.html">Click for more info</a>
             </div>
+          </a>
           </div>
         </div>
         </section>
@@ -102,12 +136,15 @@
           <h2> Tutors </h2>
           <div class = "grid_container">
             {% for tutor in Tutors %}
-              <div id = "tutors{{ tutor.i }}">
+            <a class = "grid_wrap" href = "#">
+              <div id = "tutors{{ tutor.i }}" class = "{{ tutor.parity }}">
                 <h4> {{ tutor.Name }} </h4>
                 <h6> {{ tutor.Title }} </h6>
                       <img src="{% static "pages/"|add:tutor.Path|safe %}" alt=" {{ tutor.Alt }}" height="150"/>
-                      <a href="under_construction.html">Click for more info</a>
+
               </div>
+            </a>
+
             {% endfor %}
 
           </div>
