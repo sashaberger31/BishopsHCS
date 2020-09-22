@@ -1,157 +1,46 @@
 <!DOCTYPE html>
-<html>
-  <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title> Become a Student | The Global Milestone Club </title>
-      <link rel="stylesheet" href="https://use.typekit.net/wvo2aqc.css">
-      <link rel = "stylesheet", type = "text/css", href = "../stylesheets/style_all.css">
-      <link rel = "stylesheet", type = "text/css", href = "../stylesheets/style_become_student.css">
-      <link rel = "stylesheet", type = "text/css", href = "../stylesheets/header.css">
-      <script
-      src="https://code.jquery.com/jquery-3.5.0.min.js"
-        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
-      crossorigin="anonymous"></script>
-      <script src = "../scripts/header.js"></script>
-  </head>>
+<html lang="en">
+ <head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <body>
-    <!-- Header and Dummy combo -->
-    <div class = "header_dummy">
-    </div>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <header id = "header">
-        <a class = "logo" href="../index.html"><img src = "../img/icons/Logo.svg"/></a>
-      <nav>
+ <title>Login | The Global Milestone Club</title>
+ </head>
+ <body>
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <a class="navbar-brand" href="#">GMC Login</a>
+ <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsible" aria-controls="collapsible" aria-expanded="false" aria-label="Toggle navigation">
+ <span class="navbar-toggler-icon"></span>
+ </button>
 
+ <div class="collapse navbar-collapse" id="collapsible">
+   <ul class="navbar-nav mr-auto">
+     <li class="nav-item active">
+       <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+     </li>
+   </ul>
+ </div>
+</nav>
 
-        <div class = "navlist">
-          <ul>
-            <a class= "hamburger_parent">
+<form action = "#">
+  <div class = "form-group">
+  <label for = "uname"> ID: </label>
+  <input type = "username" class= "form-control" placeholder = "Enter your ID" id = "uname">
+  </div>
+  <div class = "form-group">
+    <label for = "pwd">Password: </label>
+    <input type = "password" class = "form-control" placeholder = "Enter your password" id = "pwd">
+  </div>
+  <div class = "form-group form-check">
+    <label class = "form-check-label"><input class= "form-check-input" type = "checkbox"> Remember me  </label>
+  </div>
+  <button type = "submit" class = "btn btn-primary"> Submit </button>
+</form>
 
-              <div class = "hamburger">
-                <div class = "hamburger_1">
-                </div>
-                <div class="hamburger_mid">
-                </div>
-                <div class = "hamburger_2">
-                </div>
-
-              </div>
-            </a>
-
-            <a href="../index.html">
-            <h4>Home</h4>
-            </a>
-            <a href="become_student.html" class = "current" >
-
-              <h4>Become a Student </h4>
-              </a>
-  <a href= "become_tutor.html">
-
-              <h4> Become a Tutor</h4>
-              </a>
-              <a href="../pages/about.html">
-              <h4> About Us   </h4>
-              </a>
-
-              <a href="under_construction.html">
-              <h4>Login</h4>
-              </a>
-              <nav class = "lang_switch">
-                <a class = "lang" href = "https://cn.globalmilestone.org/pages/become_student.html"><img src = "../img/icons/flags/china.png" alt = "中国"/><p> 中国</p></a>  <a class = "lang" href = "https://mx.globalmilestone.org/pages/become_student.html"><img src = "../img/icons/flags/mexico.png" alt = "Mexico"/><p> M&#233;xico</p></a>
-              </nav>
-
-            </ul>
-
-          </div>
-
-      </nav>
-
-
-
-
-    </header>
-
-    <section class="content_wrapper">
-        <section class = "classes_wrapper section_wrapper">
-        <div class = "classes section_container">
-          <h2> Classes </h2>
-          <div id = "new_student">
-                        <h3>First time enrolling? Start here:</h3>
-                        <p>Email our U.S. program director at <a href="mailto:sasha@globalmilestone.org">sasha@globalmilestone.org</a></p>
-          </div>
-
-          <h3>Already a student? Join some classes:</h3>
-          <p>To join, email the person listed under "contact".</p>
-          <div class = "grid_container">
-
-
-            <div id = "writing">
-              <h4>Writing</h4>
-                      <img src="../img/icons/writing.svg" alt="Writing"  title="Writing by Kaleo from the Noun Project" height="150"/>
-                      <p>Contact: <a class="email" href="mailto:crystal@globalmilestone.org">crystal@globalmilestone.org</a></p>
-                      <a>Click for more info</a>
-            </div>
-
-            <div id = "reading">
-              <h4>Reading</h4>
-              <img src="../img/icons/reading.svg" alt="Reading" title = "Reading by Vectorstall from the Noun Project" height="150"/>
-              <p>Contact: <a class="email" href="mailto:athena@globalmilestone.org">athena@globalmilestone.org</a></p>
-              <a>Click for more info</a>
-            </div>
-
-            <div id = "math">
-              <h4>Math - Standard</h4>
-            <img src="../img/icons/math_std.svg" alt="Math" title="Math by shashank singh from the Noun Project" height="150"/>
-            <p>Contact: <a class="email" href="mailto:sasha@globalmilestone.org">sasha@globalmilestone.org</a></p>
-            <a>Click for more info</a>
-            </div>
-
-
-            <div id = "history">
-              <h4>History</h4>
-            <img src="../img/icons/history.svg" alt="History" title = "Castle by Made from the Noun Project" height="150"/>
-            <p>Contact: <a class="email" href="mailto:will@globalmilestone.org">will@globalmilestone.org</a></p>
-            <a>Click for more info</a>
-            </div>
-            <div id = "amc">
-              <h4>Math - AMC 8</h4>
-            <img src="../img/icons/math_amc.svg" alt="AMC" title = "Math by Becris from the Noun Project" height="150"/>
-            <p>Contact: <a class="email" href="mailto:sasha@globalmilestone.org">sasha@globalmilestone.org</a></p>
-            <a>Click for more info</a>
-            </div>
-            <div id = "spanish">
-              <h4>Spanish</h4>
-            <img src="../img/icons/spanish.svg" alt="Spanish" title = "spanish by corpus delicti from the Noun Project" height="150"/>
-            <p>Contact: <a class="email" href="mailto:athena@globalmilestone.org">athena@globalmilestone.org</a></p>
-            <a>Click for more info</a>
-            </div>
-            <div id = "chinese">
-              <h4>Chinese</h4>
-            <img src="../img/icons/chinese.svg" alt="Chinese" title = "China by Adrien Coquet from the Noun Project"height="150"/>
-            <p>Contact: <a class="email" href="mailto:crystal@globalmilestone.org">crystal@globalmilestone.org</a></p>
-            <a>Click for more info</a>
-            </div>
-            <div id = "music">
-              <h4>Music Theory</h4>
-            <img src="../img/icons/music.svg" alt="Music Theory" title = "Music Note by Icongeek26 from the Noun Project" height="150"/>
-            <p>Contact: <a class="email" href="mailto:athena@globalmilestone.org">athena@globalmilestone.org</a></p>
-            <a>Click for more info</a>
-            </div>
-          </div>
-                  <h3>Have suggestions for a new class?  </h3><p>Email our Curriculum Director at <a href = "mailto:crystal@globalmilestone.org">crystal@globalmilestone.org</a></p>
-        </div>
-
-        </section>
-
-      <footer id = "footer">
-        <div class = "footer_wrapper">
-        <small>Found a bug or a problem with the website? Email me at&nbsp;<a href="mailto:sasha@globalmilestone.org">sasha@globalmilestone.org</a>.</small>
-        <br/>
-        <small> Copyright &copy; 2020 Global Milestone Club. All Rights Reserved.</small>
-        </div>
-      </footer>
-    </section>
-  </body>
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ </body>
 </html>
