@@ -1,8 +1,8 @@
 from django.db import models
-from django.contrib.auth.models import User
 
 # Create your models here.
 
+# This is the User that will log in. It will have a related student/tutor object.
 class Student (models.Model):
 	# Identity and Contact Info
 	first_name = models.CharField(max_length = 100, default = "")
