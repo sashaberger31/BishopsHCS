@@ -13,6 +13,27 @@ CacheView: views that don't set any caching flags in the HTTP Headers
 NoCacheView: views that set no-cache, no-store flags
 """
 
+def partition(self, num_rows, per_row, tail, objects):
+	ret = "\n"
+	for j in range(num_rows-1):
+		row = "\""
+		for i in range(per_row):
+			row += "tutor" + str(objects[per_row*j+i]["i"])
+			if i != per_row-1:
+				row += " "
+		row += "\"\n"
+		ret += row
+	row = "\""
+	for k in range(tail):
+		row += "tutor" + str(objects[per_row*(num_rows-1)+k]["i"]) + " "
+		if k != tail-1:
+			row += " "
+	row += ". " * (per_row-tail)
+	row += "\";"
+	ret += row
+	return ret
+
+
 class NoCacheView(View):
 	"""
 	This is a view which returns the correct version of the page for each locale.
@@ -278,10 +299,16 @@ class AboutView(NoCacheView):
 		return response
 class EnrollView(NoCacheView):
 	def template_response(self, request, locale):
-		context = {}
+		enroll_page = WebPage.objects.get(name = "Enroll")
+		class_section = WebSection.objects.filter(parent_page = enroll_page).get(name = "Classes")
+		class_section_qset = WebSection.objects.filter(parent_section = class_section)
+		classes = [class_section_qset.get(name = str(i)) for i in range(1,len(class_section_qset)+1)]
+
+		# Partition them
 		context = self.set_header_locale(context, locale)
 		response = render(request, "sub/enroll.html", context)
 		return response
+
 def enroll_us(request):
 
 	response = render(request, "sub/enroll.html")

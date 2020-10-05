@@ -1,119 +1,141 @@
-
+<!-- BASIC DJANGO -->
 {% extends "base_header_footer.html" %}
 {% load static %}
 
-
+<!-- Add any special stylesheets/scripts/imports here -->
 {% block head %}
   <link rel = "stylesheet", type = "text/css", href = "{% static "pages/stylesheets/style_home.css" %}">
   <script src = "{% static "pages/scripts/home.js" %}"></script>
 {% endblock %}
 
+<!-- Enter the current locale here -->
 {% block localeA %}{{locale}}{% endblock %}
 {% block localeB %}{{locale}}{% endblock %}
 {% block localeC %}{{locale}}{% endblock %}
 {% block localeD %}{{locale}}{% endblock %}
 
+<!-- This is for the links that will appear in the header -->
 {% block lang_switch %}
-
 <a class = "lang" href = "https://globalmilestone.org/{{nonlocal1}}/"><img src = "{% static nonlocallink1 %}" alt = "{{nonlocaltext1|safe}}"/><p> {{nonlocaltext1|safe}}</p></a>
 <a class = "lang"  href = "https://globalmilestone.org/{{nonlocal2}}/"><img src = "{% static nonlocallink2 %}" alt = "{{nonlocaltext2|safe}}"/><p>{{nonlocaltext2|safe}}</p></a>
 {% endblock %}
 
+<!-- All of this will go inside body > content_wrapper -->
 {% block content %}
+  <main id = "landing" class = "landing main_sections">
+    <section class = "landing_inner">
+      <h1> <span> We are </span> the Global Milestone Club </h1>
+      <h3> A free and accessible tutoring service for a just world. </h3>
+    </section>
+  </main>
 
+  <!-- Dummy div to hold the background image -->
+  <div class = "background_dummy">
+  </div>
 
-
-<main id = "landing" class = "landing main_sections">
-  <section class = "landing_inner">
-    <h1> <span> We are </span> the Global Milestone Club </h1>
-    <h3> A free and accessible tutoring service for a just world. </h3>
-  </section>
-
-</main>
-<div class = "bckg">
-</div>
-
+  <!-- The "Our Mission" section -->
+  <!-- The wrapper does not slide -->
   <section class = "mission_wrapper section_wrapper">
+    <!-- The container does not slide -->
     <div class = "mission section_container slide_left">
       <h2> Our Mission </h2>
+      <!-- Container for all of mini-sections -->
       <div class = "flex_container">
+
+        <!-- each horizontal secion -->
         <span id = "virtual" class = "1_slide_1">
-        <div class = "slider_text_container">
-        <h3> {{ MissionSubsectionTitle1 }} </h3>
-        <p> {{ MissionSubsectionText1 }}</p>
-        </div>
-        <img src="{% static "pages/img/icons/tutor_1.svg" %}" alt="triangle with all three sides equal" height="90"/>
+          <div class = "slider_text_container">
+            <h3> {{ MissionSubsectionTitle1 }} </h3>
+            <p> {{ MissionSubsectionText1 }} </p>
+          </div>
+          <img src="{% static "pages/img/icons/tutor_1.svg" %}" alt="A tutor." height="90"/>
        </span>
 
+       <!-- each horizontal secion -->
        <span id = "student" class = "1_slide_2">
           <div class = "slider_text_container">
             <h3> {{ MissionSubsectionTitle2 }} </h3>
-          <p>{{ MissionSubsectionText2 }}</p>
-        </div>
-        <img src="{% static "pages/img/icons/students_1.svg" %}"  height="90"/>
+            <p> {{ MissionSubsectionText2 }} </p>
+          </div>
+          <img src="{% static "pages/img/icons/students_1.svg" %}" alt = "A student." height="90"/>
         </span>
 
+        <!-- each horizontal secion -->
         <span id = "pathways" class = "1_slide_3">
             <div class = "slider_text_container">
-        <h3> {{ MissionSubsectionTitle3 }} </h3>
-        <p>{{ MissionSubsectionText3 }}</p>
-        </div>
-        <img src="{% static "pages/img/icons/world.svg" %}" title = "world by Guilherme Furtado from the Noun Project" height="90"/>
+              <h3> {{ MissionSubsectionTitle3 }} </h3>
+              <p> {{ MissionSubsectionText3 }} </p>
+            </div>
+            <img src="{% static "pages/img/icons/world.svg" %}" alt = "A globe." title = "world by Guilherme Furtado from the Noun Project" height="90"/>
         </span>
-      </div>
-    </div>
-    </section>
 
-    <section class = "works_wrapper section_wrapper">
-    <div class = "works section_container slide_right">
-    <h2>How It Works </h2>
-    <div class = "flex_container">
-      <span id = "virtual" class = "2_slide_1">
-          <div class = "slider_text_container">
-      <h3>{{ WorksSubsectionTitle1 }}</h3>
-      <p>{{ WorksSubsectionText1 }}</p>
       </div>
-      <img src="{% static "pages/img/icons/zoom.svg" %}" title = "Video Chat by Eucalyp from the Noun Project" height="90"/>
-      </span>
-
-      <span id = "student" class = "2_slide_2">
-          <div class = "slider_text_container">
-      <h3>{{ WorksSubsectionTitle2 }}</h3>
-      <p>{{ WorksSubsectionText2}}</p>
-      </div>
-      <img src="{% static "pages/img/icons/weekly.svg" %}" title = "Calendar by Alice Design from the Noun Project" height="90"/>
-      </span>
-
-      <span id = "pathways" class = "2_slide_3">
-          <div class = "slider_text_container">
-      <h3>{{ WorksSubsectionTitle3 }}</h3>
-      <p>{{ WorksSubsectionText3 }}</p>
-      </div>
-      <img src="{% static "pages/img/icons/exam.svg" %}" title = "exam by Adrien Coquet from the Noun Project" height="90"/>
-      </span>
-    </div>
     </div>
   </section>
 
+  <!-- Wrapper for the "How it Works" section -->
+  <!-- The wrapper does not slide-->
+  <section class = "works_wrapper section_wrapper">
+    <!-- The container does slide -->
+    <div class = "works section_container slide_right">
+      <h2>How It Works </h2>
+
+      <!-- This acts as a container for the little sections-->
+      <div class = "flex_container">
+        <!-- each little section -->
+        <span id = "zoom" class = "2_slide_1">
+          <div class = "slider_text_container">
+            <h3>{{ WorksSubsectionTitle1 }}</h3>
+            <p>{{ WorksSubsectionText1 }}</p>
+          </div>
+          <img src="{% static "pages/img/icons/zoom.svg" %}" alt = "A photo of zoom." title = "Video Chat by Eucalyp from the Noun Project" height="90"/>
+        </span>
+
+        <!-- each little section -->
+        <span id = "weekly" class = "2_slide_2">
+            <div class = "slider_text_container">
+              <h3>{{ WorksSubsectionTitle2 }}</h3>
+              <p>{{ WorksSubsectionText2}}</p>
+            </div>
+            <img src="{% static "pages/img/icons/weekly.svg" %}" alt = "A calendar." title = "Calendar by Alice Design from the Noun Project" height="90"/>
+        </span>
+
+        <!-- each little section -->
+        <span id = "exam" class = "2_slide_3">
+            <div class = "slider_text_container">
+              <h3>{{ WorksSubsectionTitle3 }}</h3>
+              <p>{{ WorksSubsectionText3 }}</p>
+            </div>
+            <img src="{% static "pages/img/icons/exam.svg" %}" alt = "A test." title = "exam by Adrien Coquet from the Noun Project" height="90"/>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- This is the wrapper for the "find out more" section -->
+  <!-- The wrapper does not slide -->
   <section class = "final_wrapper section_wrapper">
-  <div class = "final section_container slide_up">
-  <h2>{{ MoreHeaderText }}</h2>
-  <div class = "flex_container">
-    <span id = "get_tutor_final" class = "3_slide_1">
-      <a href="{{ MoreLink1 }}">{{ MoreText1 }}</a>
-    </span>
+    <!-- The container slides -->
+    <div class = "final section_container slide_up">
+      <h2>{{ MoreHeaderText }}</h2>
 
-    <span id = "become_tutor_final" class = "3_slide_2">
-      <a href= "{{ MoreLink2 }}">{{ MoreText2 }}</a>
-    </span>
+      <!-- This contains all of the other sections -->
+      <div class = "flex_container">
+        <!-- each little sections -->
+        <span id = "get_tutor_final" class = "3_slide_1">
+          <a href="{{ MoreLink1 }}">{{ MoreText1 }}</a>
+        </span>
 
-    <span id = "about_us_final" class = "3_slide_3">
-    <a href = "{{ MoreLink3 }}">{{ MoreText3 }}</a>
-    </span>
-  </div>
-  </div>
+        <!-- each little section -->
+        <span id = "become_tutor_final" class = "3_slide_2">
+          <a href= "{{ MoreLink2 }}">{{ MoreText2 }}</a>
+        </span>
 
-</section>
-
-
+        <!-- each little section -->
+        <span id = "about_us_final" class = "3_slide_3">
+        <a href = "{{ MoreLink3 }}">{{ MoreText3 }}</a>
+        </span>
+      </div>
+    </div>
+  </section>
 {% endblock %}

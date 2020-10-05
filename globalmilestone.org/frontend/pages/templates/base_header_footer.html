@@ -23,17 +23,18 @@
   </head>
 
   <body>
+    <!-- This will not be fixed and will move the sections down -->
     <div class = "header_dummy">
     </div>
+
+    <!-- -->
     <header id = "header">
+        <div class = "header_logo">
         <a class = "logo" href="https://globalmilestone.org/us"><img src = "{% static "pages/img/icons/Logo.svg" %}"/></a>
-      <nav>
+        </div>
 
-
-        <div class = "navlist">
-          <ul>
-            <a class= "hamburger_parent">
-
+          <div class = "hamburger_wrapper">
+            <a class= "hamburger_link">
               <div class = "hamburger">
                 <div class = "hamburger_1">
                 </div>
@@ -41,44 +42,56 @@
                 </div>
                 <div class = "hamburger_2">
                 </div>
-
               </div>
             </a>
-
-            <a href="https://globalmilestone.org/{% block localeA %}{% endblock %}/" class="home_link">
-            <h4>Home</h4>
-            </a>
-            <a href="https://globalmilestone.org/{% block localeB %}{% endblock %}/enroll" class="become_student_link">
-
-              <h4>Become a Student </h4>
-              </a>
-              <a href="https://globalmilestone.org/{% block localeC %}{% endblock %}/join" class = "become_tutor_link">
-
-              <h4> Become a Tutor</h4>
-              </a>
-              <a href="https://globalmilestone.org/{% block localeD %}{% endblock %}/about" class = "about_link">
-              <h4> About Us   </h4>
-              </a>
-
-              <a href="pages/under_construction.html" class = "login_link">
-              <h4>Login</h4>
-              </a>
-              <nav class = "lang_switch">
-                {% block lang_switch %}
-
-                {% endblock %}
-              </nav>
-
-            </ul>
-
           </div>
 
-      </nav>
+          <div class = "header_list">
+            <ul>
+              <li>
+                <a href="https://globalmilestone.org/{% block localeA %}{% endblock %}/" class="home_link">
+                  Home
+                </a>
+              </li>
 
+              <li>
+                <a href="https://globalmilestone.org/{% block localeB %}{% endblock %}/enroll" class="become_student_link">
+                  Enroll
+                </a>
+              </li>
 
+              <li>
+                <a href="https://globalmilestone.org/{% block localeC %}{% endblock %}/join" class = "become_tutor_link">
+                  Join
+                </a>
+              </li>
 
+              <li>
+                <a href="https://globalmilestone.org/{% block localeD %}{% endblock %}/about" class = "about_link">
+                  About Us
+                </a>
+              </li>
 
-    </header>
+              <li>
+                <a href="https://globalmilestone.org/us/about" class = "more_link">
+                  More &#9656;
+                </a>
+              </li>
+
+              <li>
+                <a href="pages/under_construction.html" class = "login_link">
+                  Login
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class = "lang_switch">
+            {% block lang_switch %}
+            {% endblock %}
+          </div>
+
+      </header>
     <section class="content_wrapper">
 {% block content %}
 
