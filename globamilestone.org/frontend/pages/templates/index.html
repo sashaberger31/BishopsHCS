@@ -16,12 +16,15 @@
 
 <!-- This is for the links that will appear in the header -->
 {% block lang_switch %}
-<a class = "lang" href = "https://globalmilestone.org/{{nonlocal1}}/"><img src = "{% static nonlocallink1 %}" alt = "{{nonlocaltext1|safe}}"/><p> {{nonlocaltext1|safe}}</p></a>
-<a class = "lang"  href = "https://globalmilestone.org/{{nonlocal2}}/"><img src = "{% static nonlocallink2 %}" alt = "{{nonlocaltext2|safe}}"/><p>{{nonlocaltext2|safe}}</p></a>
+<a class = "lang" href = "https://globalmilestone.org/{{nonlocal1}}/"><img src = "{% static nonlocallink1 %}" alt = "{{nonlocaltext1|safe}}" height = "40" /><p> {{nonlocaltext1|safe}}</p></a>
+<a class = "lang"  href = "https://globalmilestone.org/{{nonlocal2}}/"><img src = "{% static nonlocallink2 %}" alt = "{{nonlocaltext2|safe}}" height = "40" /><p>{{nonlocaltext2|safe}}</p></a>
 {% endblock %}
 
 <!-- All of this will go inside body > content_wrapper -->
 {% block content %}
+  <div class = "background_dummy">
+  </div>
+
   <main id = "landing" class = "landing main_sections">
     <section class = "landing_inner">
       <h1> <span> We are </span> the Global Milestone Club </h1>
@@ -30,8 +33,6 @@
   </main>
 
   <!-- Dummy div to hold the background image -->
-  <div class = "background_dummy">
-  </div>
 
   <!-- The "Our Mission" section -->
   <!-- The wrapper does not slide -->

@@ -62,7 +62,7 @@ function threeScroll() {
 
 $(function(){
   // This is to select the correct link as "current" in the header
-  $('.home_link').addClass("current");
+  $('.home').addClass("current");
   $(window).on('scroll', oneScroll);
   if ($(window).scrollTop() >= $('.mission').offset().top - .80*window.innerHeight) {
      $(window).off('scroll', oneScroll);

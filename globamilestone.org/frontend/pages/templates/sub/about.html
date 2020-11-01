@@ -49,24 +49,26 @@
 {% block localeC %}{{locale}}{% endblock %}
 {% block localeD %}{{locale}}{% endblock %}
 
+
 {% block lang_switch %}
-<a class = "lang" href = "https://globalmilestone.org/{{nonlocal1}}/about"><img src = "{% static nonlocallink1 %}" alt = "{{nonlocaltext1|safe}}"/><p> {{nonlocaltext1|safe}}</p></a>
-<a class = "lang"  href = "https://globalmilestone.org/{{nonlocal2}}/about"><img src = "{% static nonlocallink2 %}" alt = "{{nonlocaltext2|safe}}"/><p>{{nonlocaltext2|safe}}</p></a>
+<a class = "lang" href = "https://globalmilestone.org/{{nonlocal1}}/"><img src = "{% static nonlocallink1 %}" alt = "{{nonlocaltext1|safe}}" height = "40" /><p> {{nonlocaltext1|safe}}</p></a>
+<a class = "lang"  href = "https://globalmilestone.org/{{nonlocal2}}/"><img src = "{% static nonlocallink2 %}" alt = "{{nonlocaltext2|safe}}" height = "40" /><p>{{nonlocaltext2|safe}}</p></a>
 {% endblock %}
+
 
 
 
 {% block content %}
 
     <!-- Landing Image  -->
-
+    <div class = "bckg">
+    </div>
     <main id = "landing" class = "landing main_sections">
       <section class = "landing_inner">
         <h1>About Us</h1>
       </section>
     </main>
-    <div class = "bckg">
-    </div>
+
         <section class = "founders_wrapper section_wrapper">
         <div class = "founders section_container">
           <h2> Leadership </h2>

@@ -27,71 +27,60 @@
     <div class = "header_dummy">
     </div>
 
-    <!-- -->
+    <!-- Header section -->
     <header id = "header">
+        <!-- First part - LOGO -->
         <div class = "header_logo">
         <a class = "logo" href="https://globalmilestone.org/us"><img src = "{% static "pages/img/icons/Logo.svg" %}"/></a>
         </div>
 
+        <!-- Second part - HAMBURGER (visible only on small screens)-->
+        <a class= "hamburger_link">
           <div class = "hamburger_wrapper">
-            <a class= "hamburger_link">
-              <div class = "hamburger">
-                <div class = "hamburger_1">
-                </div>
-                <div class="hamburger_mid">
-                </div>
-                <div class = "hamburger_2">
-                </div>
+            <div class = "hamburger">
+              <div class = "hamburger_1">
               </div>
-            </a>
+              <div class="hamburger_mid">
+              </div>
+              <div class = "hamburger_2">
+              </div>
+            </div>
           </div>
+        </a>
 
-          <div class = "header_list">
-            <ul>
-              <li>
-                <a href="https://globalmilestone.org/{% block localeA %}{% endblock %}/" class="home_link">
-                  Home
-                </a>
-              </li>
+        <!-- Third part - List (folds out on small screens) -->
+              <a href="https://globalmilestone.org/{% block localeA %}{% endblock %}/" class="home">
+                Home
+              </a>
 
-              <li>
-                <a href="https://globalmilestone.org/{% block localeB %}{% endblock %}/enroll" class="become_student_link">
-                  Enroll
-                </a>
-              </li>
+              <a href="https://globalmilestone.org/{% block localeB %}{% endblock %}/enroll" class="enroll">
+                Enroll
+              </a>
 
-              <li>
-                <a href="https://globalmilestone.org/{% block localeC %}{% endblock %}/join" class = "become_tutor_link">
-                  Join
-                </a>
-              </li>
+              <a href="https://globalmilestone.org/{% block localeC %}{% endblock %}/join" class = "join">
+                Join
+              </a>
 
-              <li>
-                <a href="https://globalmilestone.org/{% block localeD %}{% endblock %}/about" class = "about_link">
-                  About Us
-                </a>
-              </li>
+              <a href="https://globalmilestone.org/{% block localeD %}{% endblock %}/about" class = "about">
+                About Us
+              </a>
 
-              <li>
-                <a href="https://globalmilestone.org/us/about" class = "more_link">
-                  More &#9656;
-                </a>
-              </li>
+              <a href="https://globalmilestone.org/us/about" class = "more">
+                More &#9656;
+              </a>
 
-              <li>
-                <a href="pages/under_construction.html" class = "login_link">
-                  Login
-                </a>
-              </li>
-            </ul>
-          </div>
+              <a href="pages/under_construction.html" class = "login">
+                Login
+              </a>
 
-          <div class = "lang_switch">
-            {% block lang_switch %}
-            {% endblock %}
-          </div>
+        <!-- Fourth part - Language switcher -->
+        <div class = "lang_switch">
+          {% block lang_switch %}
+          {% endblock %}
+        </div>
 
       </header>
+
     <section class="content_wrapper">
 {% block content %}
 
